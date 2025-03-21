@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+</head>
+<body>
+    <%- include("header.ejs", {dept: std[0].dept}) %>
+    <hr>
+    <h1>Hello Students</h1>
+    <ul>
+        <% for (i in std) { %>
+            <li><%= `${std[i].id} - ${std[i].name}` %></li>
+            <% } %>
+    </ul>
+    <hr>
+    <%- include("footer.ejs", {dept: std[std.length - 1].dept}) %>
+</body>
+</html>

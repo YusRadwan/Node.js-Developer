@@ -1,0 +1,20 @@
+1) Create Library
+
+> use Library
+
+2) Create Collaction = Books
+
+> db.createCollection(name, option)
+
+3) show Collection in my DB
+
+> show collections
+
+4) insert inside Collection == Documents  {ISBN, Title, Page}
+
+> db.Collection Name.insert([{}, {} ...])
+
+5) Drob Collection
+
+> db.Collection Name.drop() ---> Note he Delete the Collection he's standing on
+
