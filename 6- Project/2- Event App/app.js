@@ -1,14 +1,12 @@
 // Import
     const express = require("express");
     require("dotenv").config();
+
+// Callback Databasse
     const db = require('./config/database');
 
-
-// Bring
+// Callback Express Function
     const app = express();
-
-// Bring Variable From .env
-    const port = process.env.PORT || 3000;
 
 // Bring ejs Template
     app.set("view engine", "ejs");
@@ -18,12 +16,20 @@
     app.use(express.static("node_modules"));
 
 // Print Hello
-    app.get("/", (req,res)=> {
-        res.render('event/index.ejs');
+    app.get('/', (req,res)=> {
+        res.render('event/index');
     });
 
-// Server Listen
+// Servers
+    // Bring Variable From .env
+        const port = process.env.PORT || 3000;
+    
+    // Run Server
     app.listen(port, (err)=> {
-        console.log(err);
-        console.log(`Event App is Listen on Port: ${port}`);
+        if(err){
+            console.log(err);
+        }else {
+            console.log(`Event App is Listen on Port: ${port}`);
+        }
     });
+
