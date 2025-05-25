@@ -1,0 +1,34 @@
+<%- include('../fixPages/header') -%>
+<%- include('../fixPages/navbar') -%>
+<div class="container">
+    <div class="col-md-9 offset-md-2">
+        <h1 class="display-4">Add New Event:</h1>
+        <hr>
+        <form  action="/event/create" method="post">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="tile" class="form-control">
+            </div>
+
+            <div class="form-group mt-2">
+                <label for="description">Description</label>
+                <textarea name="description" rows="4" class="form-control"></textarea>
+            </div>
+
+            <div class="form-group mt-2">
+                <label for="location">Location</label>
+                <input type="text" name="location" id="location" class="form-control">
+            </div>
+
+            <div class="form-group mt-2">
+                <label for="date">Date</label>
+                <input type="date" name="date" id="date" class="form-control">
+            </div>
+
+            <div class="form-group mt-3">
+                <button type="submit" class="btn btn-primary"> Create</button>
+            </div>
+        </form>
+    </div>
+</div>
+<%- include('../fixPages/footer') -%>

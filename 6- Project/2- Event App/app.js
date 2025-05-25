@@ -1,6 +1,9 @@
-// Import
+// Import Library
     const express = require("express");
     require("dotenv").config();
+
+// Import Files
+    const eventRouter = require('./routes/event.routes');
 
 // Callback Databasse
     const db = require('./config/database');
@@ -8,17 +11,19 @@
 // Callback Express Function
     const app = express();
 
+// body-parser
+    app.use(express.urlencoded({ extended: true }));
+    app.use(express.json());
+
 // Bring ejs Template
     app.set("view engine", "ejs");
 
 // Bring Static Pages
-    app.use(express.static("assets"));
-    app.use(express.static("node_modules"));
+        app.use('/assets',express.static('assets'));
+        app.use(express.static('node_modules'));
 
-// Print Hello
-    app.get('/', (req,res)=> {
-        res.render('event/index');
-    });
+// Router
+    app.use('/', eventRouter);
 
 // Servers
     // Bring Variable From .env
