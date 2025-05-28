@@ -39,9 +39,21 @@
 
     };
 
+// get Event By Id
+    let getEventById = async (req, res) => {
+        try {
+            const event = await Event.findById({_id: req.params.id});
+            res.render('event/show', {event: event});
+        }catch(err) {
+            console.log(err);
+        }
+
+
+    }
 
 module.exports = {
     getAllEvent,
     getAddEvent,
-    addEvent
+    addEvent,
+    getEventById
 }

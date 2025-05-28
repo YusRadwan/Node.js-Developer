@@ -15,6 +15,9 @@
 // Add New Event
     router.post('/event/create', validEvent, eventContrllers.addEvent);
 
+// Get Event By ID
+    router.get('/event/show/:id', eventContrllers.getEventById);
+
 
 // Export
     module.exports = router;
