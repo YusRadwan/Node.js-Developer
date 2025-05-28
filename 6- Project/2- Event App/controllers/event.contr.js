@@ -3,6 +3,7 @@
 
 // Import Files
     const Event = require('../models/eventDB');
+    const {validationResult} = require('express-validator');
 
 // Get All Event
     let getAllEvent = async (req, res) => {
@@ -12,21 +13,32 @@
 
 // Get Page Add Event
     let getAddEvent = (req, res) => {
-        res.render('event/create');
+        res.render('event/create', {errors: false});
     };
 
 // Add Event
     let addEvent = (req, res) => {
-        let event = new Event ({
-            title: req.body.title,
-            desc: req.body.description,
-            location: req.body.location,
-            date: req.body.date,
-            created_at: Date.now()
-        });
-        event.save();
-        res.redirect('/');
+        const result = validationResult(req);
+        let err = result.array()
+
+        if(result.isEmpty()) {
+            let newEvent = new Event ({
+                title: req.body.title,
+                desc: req.body.description,
+                location: req.body.location,
+                date: req.body.date,
+                created_at: Date.now()
+            });
+            
+            newEvent.save();
+            res.redirect('/');
+        } else {
+            console.log(err);
+            res.render('event/create', {errors: err});
+        }
+
     };
+
 
 module.exports = {
     getAllEvent,

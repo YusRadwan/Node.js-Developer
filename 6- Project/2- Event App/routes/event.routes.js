@@ -3,8 +3,8 @@
     const router = express.Router();
 
 // Import Files
-    const Event = require('../models/eventDB');
     const eventContrllers = require('../controllers/event.contr');
+    const {validEvent} = require('../valid/valid.event');
 
 // Get All Event
     router.get('/', eventContrllers.getAllEvent);
@@ -13,8 +13,7 @@
     router.get('/event/create', eventContrllers.getAddEvent);
 
 // Add New Event
-    router.post('/event/create', eventContrllers.addEvent);
-
+    router.post('/event/create', validEvent, eventContrllers.addEvent);
 
 
 // Export
