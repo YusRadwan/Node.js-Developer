@@ -1,0 +1,33 @@
+
+<!-- Filter -->
+  <div class="Filter mt-3">
+    <form action="/" method="GET">
+      <select name="category" class="form-select">
+        <option value="all">All</option>
+        <option value="clothes">Clothes</option>
+        <option value="tech">Tech</option>
+      </select>
+      <input type="submit" class="btn btn-outline-primary mt-2" value="Filter">
+    </form>
+  </div>
+  
+<!-- Category -->
+  <div class="row mt-5">
+      <% for(let product of Prod) { %>
+          <div class="col col-12 col-md-6 col-lg-4 col-xl-3">
+              <div class="card" style="width: 18rem;">
+                  <img src="<%= product.image %>" class="card-img-top img-fluid img-thumbnail" width="200" height="200" alt="<%= product.image %>">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <a href="/product/<%= product._id %>" class="mt-2"><%= product.name %></a>
+                      <p class="card-text mt-2">Price: <%= product.price %> $</p>
+                    </h5>
+                    <form action="/cart" method="post">
+                      <input type="number" name="amount" class="form-control mt-2">
+                      <input type="submit" value="Add To Cart" class="btn btn-primary mt-2">
+                    </form>
+                  </div>
+              </div>
+          </div>
+      <% } %>
+  </div>

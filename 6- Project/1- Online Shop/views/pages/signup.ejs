@@ -1,0 +1,51 @@
+<%- include('../header/header')%>
+<%- include('../header/navbar')%>
+    <div class="container">
+        <form action="/signup" method="POST" class="mt-5">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp" name="username" placeholder="Username">
+            </div>
+
+                <% if (errors) { %>
+                    <% errors.forEach(err => { %>
+                        <% if (err.path === 'username') { %>
+                            <div class="alert alert-danger" role="alert">
+                                <%= err.msg %>
+                            </div>
+                        <% } %>
+                    <% }) %>
+                <% } %>
+
+            <div class="mb-3">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Email@gmail.com">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+
+                <% if (errors) { %>
+                    <% errors.forEach(err => { %>
+                        <% if (err.path === 'email') { %>
+                            <div class="alert alert-danger" role="alert">
+                                <%= err.msg %>
+                            </div>
+                        <% } %>
+                    <% }) %>
+                <% } %>
+
+            <div class="mb-3">
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Set password here">
+            </div>
+
+                <% if (errors) { %>
+                    <% errors.forEach(err => { %>
+                        <% if (err.path === 'password') { %>
+                            <div class="alert alert-danger" role="alert">
+                                <%= err.msg %>
+                            </div>
+                        <% } %>
+                    <% }) %>
+                <% } %>
+
+            <button type="submit" class="btn btn-primary">Signup</button>
+        </form>
+    </div>
+<%- include('../footer/footer') %>
