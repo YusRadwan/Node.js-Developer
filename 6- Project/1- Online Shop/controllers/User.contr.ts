@@ -19,6 +19,7 @@
 // Create Account
     export let signupUsers = asyncFunction(async (req: Request, res: Response) => {
                 try{
+
                     let result = validationResult(req);
                     if(result.isEmpty()) {
 
