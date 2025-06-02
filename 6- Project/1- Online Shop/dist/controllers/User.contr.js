@@ -103,11 +103,13 @@ exports.loggingUsers = (0, async_1.default)((req, res) => __awaiter(void 0, void
                 // Check if Password Same in Database
                 if (passwordUser) {
                     console.log(`Welcome ${emailUser} in Website`);
-                    res.redirect('/home');
+                    req.session.user = emailUser.username;
+                    console.log(`Hello ${emailUser.username}`);
+                    res.redirect('/');
                 }
                 else {
                     console.log('Error in Password When Login please try again');
-                    res.status(404).redirect('/login');
+                    res.status(401).redirect('/login');
                 }
             }
             else {

@@ -7,13 +7,16 @@
     export let getProducts = asyncFunction(async (req: Request, res: Response) => {
                 try{
                     let cate = req.query.category; // Query String Parameters
-                    // console.log(`Category is: ${cate}`);
                     if (cate && cate !== "all") {
                         let Prod = await Product.find({category: cate});
-                        res.status(200).render('index', {Prod});
+                        res.status(200).render('index', {
+                            products: Prod
+                        });
                     } else {
                         let Prod = await Product.find({});
-                        res.status(200).render('index', {Prod});
+                        res.status(200).render('index', {
+                            products: Prod
+                        });
                     }
                 }
                 catch (err) {

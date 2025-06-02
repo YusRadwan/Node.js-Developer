@@ -19,14 +19,17 @@ const async_1 = __importDefault(require("../middleware/async"));
 exports.getProducts = (0, async_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         let cate = req.query.category; // Query String Parameters
-        // console.log(`Category is: ${cate}`);
         if (cate && cate !== "all") {
             let Prod = yield ProductDB_1.default.find({ category: cate });
-            res.status(200).render('index', { Prod });
+            res.status(200).render('index', {
+                products: Prod
+            });
         }
         else {
             let Prod = yield ProductDB_1.default.find({});
-            res.status(200).render('index', { Prod });
+            res.status(200).render('index', {
+                products: Prod
+            });
         }
     }
     catch (err) {

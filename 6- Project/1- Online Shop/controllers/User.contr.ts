@@ -5,6 +5,14 @@
     import * as bcrypt from 'bcrypt';
     import { validationResult } from 'express-validator';
 
+//  session.--- لتشمل Request تعديل واجهة 
+    declare module 'express-session' {
+        interface SessionData {
+            user?: String;
+            id?: any;
+        }
+    }
+
 // Get Signup
     export let getSignup = (req: Request, res: Response) => {
         res.render('../views/pages/signup.ejs', {errors: false});
@@ -64,10 +72,12 @@
                                 // Check if Password Same in Database
                                     if(passwordUser) {
                                         console.log(`Welcome ${emailUser} in Website`);
-                                        res.redirect('/home');
+                                        req.session.user = emailUser.username;
+                                        console.log(`Hello ${emailUser.username}`);
+                                        res.redirect('/');
                                     } else {
                                         console.log('Error in Password When Login please try again');
-                                        res.status(404).redirect('/login');
+                                        res.status(401).redirect('/login');
                                     }
                             } else {
                                 console.log('Error in Email When Login please try again');
