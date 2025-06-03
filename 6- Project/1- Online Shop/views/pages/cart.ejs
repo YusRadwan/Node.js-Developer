@@ -1,0 +1,31 @@
+<%- include('../header/header') %>
+<%- include('../header/navbar') %>
+    <div class="container">
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                <th scope="col">number</th>
+                <th scope="col">name</th>
+                <th scope="col">price</th>
+                <th scope="col">amount</th>
+                <th scope="col">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% let index = 1; %>
+                <% for(let cart of carts){ %>
+                    <tr>
+                        <th scope="row"><%= index++ %></th>
+                        <td><%= cart.name %></td>
+                        <td><%= cart.price %></td>
+                        <td><%= cart.amount %></td>
+                        <td><%= cart.timestamp.toDateString() %></td>
+                        <td><input type="submit" class="btn btn-primary" name="plus" value="+"></td>
+                        <td><input type="submit" class="btn btn-primary" name="min" value="-"></td>
+                        <td><input type="submit" class="btn btn-primary" name="delete" value="Delete"></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+<%- include('../footer/footer') %>

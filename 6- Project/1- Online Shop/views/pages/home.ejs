@@ -13,7 +13,7 @@
   
 <!-- Category -->
   <div class="row mt-5">
-      <% for(let product of Prod) { %>
+      <% for(let product of products) { %>
           <div class="col col-12 col-md-6 col-lg-4 col-xl-3">
               <div class="card mt-2" style="width: 18rem;">
                   <img src="<%= product.image %>" class="card-img-top img-fluid img-thumbnail" width="200" height="200" alt="<%= product.image %>">
@@ -24,6 +24,10 @@
                     </h5>
                     <form action="/cart" method="post">
                       <input type="number" name="amount" class="form-control mt-2">
+                      <input type="hidden" name="name" value="<%= product.name %>">
+                      <input type="hidden" name="price" value="<%= product.price %>">
+                      <input type="hidden" name="productId" value="<%= product._id %>">
+                      <input type="hidden" name="redirectTo" value="/>">
                       <input type="submit" value="Add To Cart" class="btn btn-primary mt-2">
                     </form>
                   </div>

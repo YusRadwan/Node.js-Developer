@@ -10,12 +10,14 @@
                     if (cate && cate !== "all") {
                         let Prod = await Product.find({category: cate});
                         res.status(200).render('index', {
-                            products: Prod
+                            products: Prod,
+                            isUser: false
                         });
                     } else {
                         let Prod = await Product.find({});
                         res.status(200).render('index', {
-                            products: Prod
+                            products: Prod,
+                            isUser: req.session.userid
                         });
                     }
                 }
@@ -29,7 +31,10 @@
     export let getProductById = asyncFunction(async (req: Request, res: Response) => {
                 try{
                     let ProdID = await Product.findById(req.params.id); // Routing Parameters
-                    res.render('pages/product', {ProdID} );
+                    res.render('pages/product', {
+                        productId: ProdID,
+                        isUser: req.session.userid
+                    } );
                 }
                 catch (err) {
                     console.log(err);

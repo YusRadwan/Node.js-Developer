@@ -22,13 +22,15 @@ exports.getProducts = (0, async_1.default)((req, res) => __awaiter(void 0, void 
         if (cate && cate !== "all") {
             let Prod = yield ProductDB_1.default.find({ category: cate });
             res.status(200).render('index', {
-                products: Prod
+                products: Prod,
+                isUser: false
             });
         }
         else {
             let Prod = yield ProductDB_1.default.find({});
             res.status(200).render('index', {
-                products: Prod
+                products: Prod,
+                isUser: req.session.userid
             });
         }
     }
@@ -41,7 +43,10 @@ exports.getProducts = (0, async_1.default)((req, res) => __awaiter(void 0, void 
 exports.getProductById = (0, async_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         let ProdID = yield ProductDB_1.default.findById(req.params.id); // Routing Parameters
-        res.render('pages/product', { ProdID });
+        res.render('pages/product', {
+            productId: ProdID,
+            isUser: req.session.userid
+        });
     }
     catch (err) {
         console.log(err);
