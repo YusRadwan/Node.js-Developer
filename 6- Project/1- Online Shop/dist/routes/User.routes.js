@@ -21,9 +21,5 @@ router.post('/signup', signup_validator_1.validSignup, User_contr_1.signupUsers)
 router.post('/login', login_validator_1.validLogin, User_contr_1.loggingUsers);
 // Logging Out
 router.get('/logout', IsUser_midd_1.isUser, User_contr_1.logout);
-// Get Cart
-router.get('/cart', IsUser_midd_1.isUser, User_contr_1.getCart);
-// post Cart
-router.post('/cart', IsUser_midd_1.isUser, User_contr_1.postCart);
 // Export
 exports.default = router;

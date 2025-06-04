@@ -6,6 +6,10 @@
                 <img src="/<%= productId.image %>" alt="<%= productId.image %>" width="200" height="200">
                 <form action="/cart" method="POST" class="mt-2">
                     <input type="number" name="amount" class="form-control">
+                    <input type="hidden" name="name" value="<%= productId.name %>">
+                    <input type="hidden" name="price" value="<%= productId.price %>">
+                    <input type="hidden" name="productId" value="<%= productId._id %>">
+                    <input type="hidden" name="redirectTo" value="../views/pages/product">
                     <input type="submit" value="Add To Cart" class="btn btn-outline-primary mt-2">
                 </form>
             </div>

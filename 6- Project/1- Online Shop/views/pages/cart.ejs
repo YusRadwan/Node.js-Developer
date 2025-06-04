@@ -7,22 +7,31 @@
                 <th scope="col">number</th>
                 <th scope="col">name</th>
                 <th scope="col">price</th>
-                <th scope="col">amount</th>
                 <th scope="col">Date</th>
+                <th scope="col">amount</th>
+                <th scope="col">Total</th>
+                <th scope="col">Edit</th>
                 </tr>
             </thead>
             <tbody>
-                <% let index = 1; %>
-                <% for(let cart of carts){ %>
+                <% let index = 0; %>
+                <% for(let item of items){ %>
                     <tr>
-                        <th scope="row"><%= index++ %></th>
-                        <td><%= cart.name %></td>
-                        <td><%= cart.price %></td>
-                        <td><%= cart.amount %></td>
-                        <td><%= cart.timestamp.toDateString() %></td>
-                        <td><input type="submit" class="btn btn-primary" name="plus" value="+"></td>
-                        <td><input type="submit" class="btn btn-primary" name="min" value="-"></td>
-                        <td><input type="submit" class="btn btn-primary" name="delete" value="Delete"></td>
+                        <th scope="row"><%= index += 1 %></th>
+                        <td><%= item.name %></td>
+                        <td><%= item.price %> $</td>
+                        <td><%= item.timestamp.toDateString() %></td>
+                        <form method="post">
+                            <td><input type="text" class="form-control" name="amountEdit" value="<%= item.amount %>"></td>
+                            <td>
+                                <%= item.price * item.amount %> $
+                            </td>
+                            <td>
+                                <input type="hidden" name="itemOfCardID" value="<%= item._id %>">
+                                <input type="submit" class="btn btn-primary" name="save" value="Save" formaction="/cart/save">
+                                <input type="submit" class="btn btn-danger" name="delete" value="Delete" formaction="/cart/delete">
+                            </td>
+                        </form>
                     </tr>
                 <% } %>
             </tbody>

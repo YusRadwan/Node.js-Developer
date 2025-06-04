@@ -10,6 +10,7 @@
     import homeRouter from "./routes/Home.routes";
     import productRouter from "./routes/Product.routes";
     import userRouter from "./routes/User.routes";
+    import cartsRouter from "./routes/Carts.routes";
     import locat from './middleware/location';
 
 
@@ -56,8 +57,7 @@
 
 
 // Routes
-    app.use('/', homeRouter, userRouter);
-    app.use('/home', locat, homeRouter);
+    app.use('/', homeRouter, userRouter, cartsRouter);
     app.use('/product', productRouter);
 
 // Server Listen

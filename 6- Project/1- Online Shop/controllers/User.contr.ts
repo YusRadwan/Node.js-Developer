@@ -1,7 +1,6 @@
 // Import 
     import { Request, Response, NextFunction } from 'express';
     import User from './../models/UserDB';
-    import Cart from './../models/CartDB';
     import asyncFunction from '../middleware/async';
     import * as bcrypt from 'bcrypt';
     import { validationResult } from 'express-validator';
@@ -115,42 +114,3 @@
         });
     }
 
-// Get Cart
-    export let getCart = async(req: Request, res: Response) => {
-        try {
-            let userCart = await Cart.find({userId: req.session.userid});
-            console.log(userCart);
-            res.render('../views/pages/cart.ejs', {
-                carts: userCart,
-                isUser: req.session.userid
-            });
-        } catch(err) {
-            console.log(err);
-            res.send(err);
-        }
-    }
-
-// Post Cart
-    export let postCart = async (req: Request, res: Response) => {
-        try {
-            let {amount, name , price, productId, redirectTo} = req.body;
-            let cart = new Cart({
-                name: name,
-                price: price,
-                amount: amount,
-                userId: req.session.userid,
-                productId: productId,
-                timestamp: Date.now()
-            });
-            cart.save();
-            let userCart = await Cart.find({userId: req.session.userid});
-            res.render('../views/pages/cart.ejs', {
-                carts: userCart,
-                isUser: req.session.userid
-            });
-        } catch(err) {
-            console.log(err);
-            res.send(err);
-        }
-
-    }

@@ -45,9 +45,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.postCart = exports.getCart = exports.logout = exports.loggingUsers = exports.signupUsers = exports.getLogin = exports.getSignup = void 0;
+exports.logout = exports.loggingUsers = exports.signupUsers = exports.getLogin = exports.getSignup = void 0;
 const UserDB_1 = __importDefault(require("./../models/UserDB"));
-const CartDB_1 = __importDefault(require("./../models/CartDB"));
 const async_1 = __importDefault(require("../middleware/async"));
 const bcrypt = __importStar(require("bcrypt"));
 const express_validator_1 = require("express-validator");
@@ -147,44 +146,3 @@ let logout = (req, res) => {
     });
 };
 exports.logout = logout;
-// Get Cart
-let getCart = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        let userCart = yield CartDB_1.default.find({ userId: req.session.userid });
-        console.log(userCart);
-        res.render('../views/pages/cart.ejs', {
-            carts: userCart,
-            isUser: req.session.userid
-        });
-    }
-    catch (err) {
-        console.log(err);
-        res.send(err);
-    }
-});
-exports.getCart = getCart;
-// Post Cart
-let postCart = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    try {
-        let { amount, name, price, productId, redirectTo } = req.body;
-        let cart = new CartDB_1.default({
-            name: name,
-            price: price,
-            amount: amount,
-            userId: req.session.userid,
-            productId: productId,
-            timestamp: Date.now()
-        });
-        cart.save();
-        let userCart = yield CartDB_1.default.find({ userId: req.session.userid });
-        res.render('../views/pages/cart.ejs', {
-            carts: userCart,
-            isUser: req.session.userid
-        });
-    }
-    catch (err) {
-        console.log(err);
-        res.send(err);
-    }
-});
-exports.postCart = postCart;
