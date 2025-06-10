@@ -8,7 +8,8 @@
             let userCart = await Cart.find({userId: req.session.userid}, {}, {sort: {timestamp: 1 }});
             res.render('../views/pages/cart.ejs', {
                 items: userCart,
-                isUser: req.session.userid
+                isUser: req.session.userid,
+                isAdmin: req.session.isAdmin
             });
         } catch(err) {
             console.log(err);
@@ -32,7 +33,8 @@
             let userCart = await Cart.find({userId: req.session.userid}, {}, {sort: {timestamp: 1 }});
             res.render('../views/pages/cart.ejs', {
                 items: userCart,
-                isUser: req.session.userid
+                isUser: req.session.userid,
+                isAdmin: req.session.isAdmin
             });
         } catch(err) {
             console.log(err);

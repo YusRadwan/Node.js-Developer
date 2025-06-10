@@ -20,7 +20,8 @@ let getCart = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         let userCart = yield CartDB_1.default.find({ userId: req.session.userid }, {}, { sort: { timestamp: 1 } });
         res.render('../views/pages/cart.ejs', {
             items: userCart,
-            isUser: req.session.userid
+            isUser: req.session.userid,
+            isAdmin: req.session.isAdmin
         });
     }
     catch (err) {
@@ -45,7 +46,8 @@ let postCart = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         let userCart = yield CartDB_1.default.find({ userId: req.session.userid }, {}, { sort: { timestamp: 1 } });
         res.render('../views/pages/cart.ejs', {
             items: userCart,
-            isUser: req.session.userid
+            isUser: req.session.userid,
+            isAdmin: req.session.isAdmin
         });
     }
     catch (err) {

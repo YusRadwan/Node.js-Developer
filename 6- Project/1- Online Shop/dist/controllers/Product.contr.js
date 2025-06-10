@@ -23,14 +23,16 @@ exports.getProducts = (0, async_1.default)((req, res) => __awaiter(void 0, void 
             let Prod = yield ProductDB_1.default.find({ category: cate });
             res.status(200).render('index', {
                 products: Prod,
-                isUser: false
+                isUser: false,
+                isAdmin: req.session.isAdmin
             });
         }
         else {
             let Prod = yield ProductDB_1.default.find({});
             res.status(200).render('index', {
                 products: Prod,
-                isUser: req.session.userid
+                isUser: req.session.userid,
+                isAdmin: req.session.isAdmin
             });
         }
     }
@@ -45,7 +47,8 @@ exports.getProductById = (0, async_1.default)((req, res) => __awaiter(void 0, vo
         let ProdID = yield ProductDB_1.default.findById(req.params.id); // Routing Parameters
         res.render('pages/product', {
             productId: ProdID,
-            isUser: req.session.userid
+            isUser: req.session.userid,
+            isAdmin: req.session.isAdmin
         });
     }
     catch (err) {

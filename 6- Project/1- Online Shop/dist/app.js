@@ -14,6 +14,7 @@ const Home_routes_1 = __importDefault(require("./routes/Home.routes"));
 const Product_routes_1 = __importDefault(require("./routes/Product.routes"));
 const User_routes_1 = __importDefault(require("./routes/User.routes"));
 const Carts_routes_1 = __importDefault(require("./routes/Carts.routes"));
+const admin_router_1 = __importDefault(require("./routes/admin.router"));
 // use Express
 const app = (0, express_1.default)();
 dotenv_1.default.config();
@@ -48,7 +49,7 @@ mongoose_1.default.connect("mongodb://127.0.0.1:27017/online-shop")
     console.log(err);
 });
 // Routes
-app.use('/', Home_routes_1.default, User_routes_1.default, Carts_routes_1.default);
+app.use('/', Home_routes_1.default, User_routes_1.default, Carts_routes_1.default, admin_router_1.default);
 app.use('/product', Product_routes_1.default);
 // Server Listen
 const port = process.env.PORT || 4000;

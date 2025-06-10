@@ -54,7 +54,8 @@ const express_validator_1 = require("express-validator");
 let getSignup = (req, res) => {
     res.render('../views/pages/signup.ejs', {
         errors: false,
-        isUser: false
+        isUser: false,
+        isAdmin: req.session.isAdmin
     });
 };
 exports.getSignup = getSignup;
@@ -62,7 +63,8 @@ exports.getSignup = getSignup;
 let getLogin = (req, res) => {
     res.render('../views/pages/login.ejs', {
         errors: false,
-        isUser: false
+        isUser: false,
+        isAdmin: req.session.isAdmin
     });
 };
 exports.getLogin = getLogin;
@@ -110,8 +112,8 @@ exports.loggingUsers = (0, async_1.default)((req, res) => __awaiter(void 0, void
                 if (passwordUser) {
                     req.session.user = emailUser.username;
                     req.session.userid = emailUser._id;
-                    ;
-                    console.log(`Hello ${emailUser.username}`);
+                    req.session.isAdmin = emailUser.admin;
+                    console.log(`Hello ${emailUser.username} ${emailUser.admin ? '--> admin' : '--> user'}`);
                     res.redirect('/');
                 }
                 else {

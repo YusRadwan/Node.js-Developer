@@ -23,12 +23,14 @@
                       <p class="card-text mt-2">Price: <%= product.price %> $</p>
                     </h5>
                     <form action="/cart" method="post">
-                      <input type="number" name="amount" class="form-control mt-2">
+                    <% if (isUser && !isAdmin) { %>                    
+                        <input type="number" name="amount" class="form-control mt-2">
+                        <input type="submit" value="Add To Cart" class="btn btn-primary mt-2">
+                    <% } %>
                       <input type="hidden" name="name" value="<%= product.name %>">
                       <input type="hidden" name="price" value="<%= product.price %>">
                       <input type="hidden" name="productId" value="<%= product._id %>">
                       <input type="hidden" name="redirectTo" value="../views/index">
-                      <input type="submit" value="Add To Cart" class="btn btn-primary mt-2">
                     </form>
                   </div>
               </div>

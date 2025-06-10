@@ -12,16 +12,26 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/">Online Shop</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/cart">Cart</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/orders">Orders</a>
-            </li>
+            <% if (isUser && !isAdmin) { %>
+              <li class="nav-item">
+                <a class="nav-link" href="/cart">Cart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/orders">Orders</a>
+              </li>
+            <% } %>
+            <% if (isAdmin) { %>
+              <li class="nav-item">
+                <a class="nav-link" href="/addproduct">Add Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/manageorders">Manage Orders</a>
+              </li>
+            <% } %>
           </ul>
 
         <!-- Registration -->
-        <% if (!isUser) { %>
+        <% if (!isUser && !isAdmin) { %>
           <ul class="navbar-nav mb-2 mb-lg-0 justify-content-end">
             <li class="nav-item  me-2">
               <a class="nav-text btn btn-primary" href="/login">login</a>

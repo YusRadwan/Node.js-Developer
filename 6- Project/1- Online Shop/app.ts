@@ -11,9 +11,7 @@
     import productRouter from "./routes/Product.routes";
     import userRouter from "./routes/User.routes";
     import cartsRouter from "./routes/Carts.routes";
-    import locat from './middleware/location';
-
-
+    import adminRouter from "./routes/admin.router";
 
 // use Express
     const app = express();
@@ -57,7 +55,7 @@
 
 
 // Routes
-    app.use('/', homeRouter, userRouter, cartsRouter);
+    app.use('/', homeRouter, userRouter, cartsRouter, adminRouter);
     app.use('/product', productRouter);
 
 // Server Listen

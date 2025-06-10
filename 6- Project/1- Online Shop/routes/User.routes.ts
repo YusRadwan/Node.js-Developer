@@ -23,6 +23,5 @@
     // Logging Out
         router.get('/logout', isUser, logout);
 
-
 // Export
     export default router;

@@ -10,6 +10,7 @@
         interface SessionData {
             user?: String;
             userid?: any;
+            isAdmin?: Boolean;
         }
     }
 
@@ -17,7 +18,8 @@
     export let getSignup = (req: Request, res: Response) => {
         res.render('../views/pages/signup.ejs', {
             errors: false,
-            isUser: false
+            isUser: false,
+            isAdmin: req.session.isAdmin
         });
     };
 
@@ -25,10 +27,10 @@
     export let getLogin = (req: Request, res: Response) => {
         res.render('../views/pages/login.ejs', {
             errors: false,
-            isUser: false
+            isUser: false,
+            isAdmin: req.session.isAdmin
         });
     };
-
 
 // Create Account
     export let signupUsers = asyncFunction(async (req: Request, res: Response) => {
@@ -78,8 +80,9 @@
                                 // Check if Password Same in Database
                                     if(passwordUser) {
                                         req.session.user = emailUser.username;
-                                        req.session.userid = emailUser._id;;
-                                        console.log(`Hello ${emailUser.username}`);
+                                        req.session.userid = emailUser._id;
+                                        req.session.isAdmin = emailUser.admin;
+                                        console.log(`Hello ${emailUser.username} ${emailUser.admin ? '--> admin' : '--> user'}`);
                                         res.redirect('/');
                                     } else {
                                         console.log('Error in Password When Login please try again');
