@@ -45,7 +45,7 @@
     app.set('views', 'views');
 
 // Connection With DB
-    mongoose.connect("mongodb://127.0.0.1:27017/online-shop")
+    mongoose.connect(process.env.MONGODB_URI!)
         .then(() => {
             console.log("Database Connected ...!!!");
         }).catch((err: Error) => {

@@ -37,4 +37,15 @@
   "category": "tech",
   "description": "Tablet-Phones",
   "image": "Tablet.jpg"
+},
+{
+  "_id": {
+    "$oid": "684ab8d9b4235fa6563ab554"
+  },
+  "name": "Short",
+  "price": 10,
+  "category": "clothes",
+  "description": "boxer for men",
+  "image": "1749727449649-4.avif",
+  "__v": 0
 }]

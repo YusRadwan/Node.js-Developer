@@ -24,7 +24,8 @@ exports.getProducts = (0, async_1.default)((req, res) => __awaiter(void 0, void 
             res.status(200).render('index', {
                 products: Prod,
                 isUser: false,
-                isAdmin: req.session.isAdmin
+                isAdmin: req.session.isAdmin,
+                titlePage: 'Home'
             });
         }
         else {
@@ -32,7 +33,8 @@ exports.getProducts = (0, async_1.default)((req, res) => __awaiter(void 0, void 
             res.status(200).render('index', {
                 products: Prod,
                 isUser: req.session.userid,
-                isAdmin: req.session.isAdmin
+                isAdmin: req.session.isAdmin,
+                titlePage: 'Home'
             });
         }
     }
@@ -48,7 +50,8 @@ exports.getProductById = (0, async_1.default)((req, res) => __awaiter(void 0, vo
         res.render('pages/product', {
             productId: ProdID,
             isUser: req.session.userid,
-            isAdmin: req.session.isAdmin
+            isAdmin: req.session.isAdmin,
+            titlePage: 'Product Details'
         });
     }
     catch (err) {

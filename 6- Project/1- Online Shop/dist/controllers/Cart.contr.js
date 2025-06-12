@@ -21,7 +21,8 @@ let getCart = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         res.render('../views/pages/cart.ejs', {
             items: userCart,
             isUser: req.session.userid,
-            isAdmin: req.session.isAdmin
+            isAdmin: req.session.isAdmin,
+            titlePage: 'Cart'
         });
     }
     catch (err) {

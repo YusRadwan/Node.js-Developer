@@ -3,22 +3,71 @@
     <div class="container">
         <div class="addProduct mt-3">
             <h3 class="text-center mb-5 mt-5">Add Product</h3>
-            <form action="/addProduct" method="post">
+            <form action="/addProduct" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp" name="name" placeholder="Product Name">
                 </div>
+                    <% if (errors) { %>
+                        <% errors.forEach(err => { %>
+                            <% if (err.path === 'name') { %>
+                                <div class="alert alert-danger" role="alert">
+                                    <%= err.msg %>
+                                </div>
+                            <% } %>
+                        <% }) %>
+                    <% } %>
                 <div class="mb-3">
                     <input type="number" class="form-control" id="exampleInputText" aria-describedby="textHelp" name="price" placeholder="Product Price">
                 </div>
-                <div class="mb-3">
-                    <input type="text" class="form-control" id="exampleInputText" aria-describedby="textHelp" name="category" placeholder="Product Category">
+                    <% if (errors) { %>
+                        <% errors.forEach(err => { %>
+                            <% if (err.path === 'price') { %>
+                                <div class="alert alert-danger" role="alert">
+                                    <%= err.msg %>
+                                </div>
+                            <% } %>
+                        <% }) %>
+                    <% } %>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                    <select class="form-select" id="inputGroupSelect01" name="category" placeholder="Product Category">
+                        <option value="clothes">Clothes</option>
+                        <option value="tech">Tech</option>
+                    </select>
                 </div>
+                    <% if (errors) { %>
+                        <% errors.forEach(err => { %>
+                            <% if (err.path === 'category') { %>
+                                <div class="alert alert-danger" role="alert">
+                                    <%= err.msg %>
+                                </div>
+                            <% } %>
+                        <% }) %>
+                    <% } %>
                 <div class="mb-3">
                     <textarea name="description" class="form-control" id="exampleInputText" aria-describedby="textHelp" rows="3"></textarea>
                 </div>
+                    <% if (errors) { %>
+                        <% errors.forEach(err => { %>
+                            <% if (err.path === 'description') { %>
+                                <div class="alert alert-danger" role="alert">
+                                    <%= err.msg %>
+                                </div>
+                            <% } %>
+                        <% }) %>
+                    <% } %>
                 <div class="mb-3">
-                    <input class="form-control" type="file" id="formFile">
+                    <input class="form-control" name="image" type="file" id="formFile">
                 </div>
+                    <% if (errors) { %>
+                        <% errors.forEach(err => { %>
+                            <% if (err.path === 'image') { %>
+                                <div class="alert alert-danger" role="alert">
+                                    <%= err.msg %>
+                                </div>
+                            <% } %>
+                        <% }) %>
+                    <% } %>
                 <button type="submit" class="btn btn-primary">Add Product</button>
             </form>
         </div>

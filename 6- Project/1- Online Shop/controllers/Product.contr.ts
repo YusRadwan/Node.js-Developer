@@ -12,14 +12,16 @@
                         res.status(200).render('index', {
                             products: Prod,
                             isUser: false,
-                            isAdmin: req.session.isAdmin
+                            isAdmin: req.session.isAdmin,
+                            titlePage: 'Home'
                         });
                     } else {
                         let Prod = await Product.find({});
                         res.status(200).render('index', {
                             products: Prod,
                             isUser: req.session.userid,
-                            isAdmin: req.session.isAdmin
+                            isAdmin: req.session.isAdmin,
+                            titlePage: 'Home'
                         });
                     }
                 }
@@ -36,7 +38,8 @@
                     res.render('pages/product', {
                         productId: ProdID,
                         isUser: req.session.userid,
-                        isAdmin: req.session.isAdmin
+                        isAdmin: req.session.isAdmin,
+                        titlePage: 'Product Details'
                     } );
                 }
                 catch (err) {

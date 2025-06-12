@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "684ab47499409fe664f715f8"
+  },
+  "name": "Short",
+  "price": 20,
+  "amount": 9,
+  "userId": "684a85c9e2c2ee494d061d49",
+  "productId": "684ab44d99409fe664f715ed",
+  "timestamp": {
+    "$date": "2025-06-12T11:05:36.877Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684ab47899409fe664f715fb"
+  },
+  "name": "Short",
+  "price": 20,
+  "amount": 20,
+  "userId": "684a85c9e2c2ee494d061d49",
+  "productId": "684ab44d99409fe664f715ed",
+  "timestamp": {
+    "$date": "2025-06-12T11:05:44.177Z"
+  },
+  "__v": 0
+}]

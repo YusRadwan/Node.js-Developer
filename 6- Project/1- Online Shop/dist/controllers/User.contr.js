@@ -55,7 +55,8 @@ let getSignup = (req, res) => {
     res.render('../views/pages/signup.ejs', {
         errors: false,
         isUser: false,
-        isAdmin: req.session.isAdmin
+        isAdmin: req.session.isAdmin,
+        titlePage: 'Sign UP'
     });
 };
 exports.getSignup = getSignup;
@@ -64,7 +65,8 @@ let getLogin = (req, res) => {
     res.render('../views/pages/login.ejs', {
         errors: false,
         isUser: false,
-        isAdmin: req.session.isAdmin
+        isAdmin: req.session.isAdmin,
+        titlePage: 'Login'
     });
 };
 exports.getLogin = getLogin;

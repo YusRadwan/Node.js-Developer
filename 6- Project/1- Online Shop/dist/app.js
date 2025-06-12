@@ -42,7 +42,7 @@ app.use((0, express_session_1.default)({
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 // Connection With DB
-mongoose_1.default.connect("mongodb://127.0.0.1:27017/online-shop")
+mongoose_1.default.connect(process.env.MONGODB_URI)
     .then(() => {
     console.log("Database Connected ...!!!");
 }).catch((err) => {

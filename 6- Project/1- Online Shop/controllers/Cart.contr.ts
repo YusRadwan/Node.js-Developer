@@ -9,7 +9,8 @@
             res.render('../views/pages/cart.ejs', {
                 items: userCart,
                 isUser: req.session.userid,
-                isAdmin: req.session.isAdmin
+                isAdmin: req.session.isAdmin,
+                titlePage: 'Cart'
             });
         } catch(err) {
             console.log(err);

@@ -1,27 +1,20 @@
 [{
   "_id": {
-    "$oid": "6821bed4500425df3e639965"
-  },
-  "username": "usuf",
-  "email": "usuf@gmail.com",
-  "password": "$2b$10$qMtntdZCgVfbt93UTm8zYOlR7ulOo8iOi5Ij.fO1h5709qX7edDba",
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "6821e92504eae9940e671431"
+    "$oid": "684a85c9e2c2ee494d061d49"
   },
   "username": "malek",
   "email": "malek@gmail.com",
-  "password": "$2b$10$IWPUgSg8j59MnOcz.tQ.Y.zrfJls/182MIapLaBoiIV5Gb5RF1fdC",
+  "password": "$2b$10$nzalpVISF4ciMUsRdYAW/uwcBQUoa8t8PzEiaVCIM5aT6w1qcEyL6",
+  "admin": false,
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "68294d65528c504dce00e6f3"
+    "$oid": "684a85d7e2c2ee494d061d4c"
   },
-  "username": "mohamed",
-  "email": "mohamed@gmail.com",
-  "password": "$2b$10$7dYSQxTxdcVJF0PrFnq/O.6XEdZ40rGQnWvt3Az7T5nMrAxsIq0aS",
+  "username": "usuf",
+  "email": "usuf@gmail.com",
+  "password": "$2b$10$ObJB1Wt5qTm6HtpQTe8o1emJw5RolrUNUxLfcfs5JBbhv9IcNv15u",
+  "admin": true,
   "__v": 0
 }]
