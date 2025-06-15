@@ -1,0 +1,10 @@
+<%- include('../fixPages/header') -%>
+<%- include('../fixPages/navbar') -%>
+<div class="container">
+    <% if (errorMsg) { %>
+        <div class="alert alert-danger mt-1 center-alert" role="alert">
+            <%= errorMsg %>
+        </div>
+    <% } %>
+</div>
+<%- include('../fixPages/footer') -%>

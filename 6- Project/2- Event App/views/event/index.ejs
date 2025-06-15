@@ -1,7 +1,14 @@
 <%- include('../fixPages/header') -%>
 <%- include('../fixPages/navbar') -%>
 <div class="container">
+    <!-- Message Succesfuly -->
+    <% if (msg && msg != '' ) { %>
+        <div class="alert alert-success mt-1 center-alert" role="alert">
+            <%= msg %>
+        </div>
+    <% } %>
     <div class="row">
+        <!-- Events -->
         <% events.forEach((event)=> {%>
             <div class="col-sm-6 col-md-4 mt-3">
                 <div class="card">

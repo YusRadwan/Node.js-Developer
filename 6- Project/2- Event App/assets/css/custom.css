@@ -1,0 +1,10 @@
+body {
+    color: black;
+}
+.left-alert {
+    justify-self: left;
+}
+
+.center-alert {
+    justify-self: center;
+}
