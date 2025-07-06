@@ -1,0 +1,39 @@
+<%- include('../fixPages/header') -%>
+<%- include('../fixPages/navbar') -%>
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-md 3">
+            <img src="/upload/images/<%= user.avatar %>" alt="Profile Image" width="300">
+        </div>
+        <div class="col-md-9">
+            <h1 class="display-4">
+                <% if (user) { %>
+                    PROFILE USER : <%= user.email.split('@')[0] %>
+                <% } %>
+            </h1>
+            <hr>
+            <!-- Message Succesfuly -->
+                <% if (success && success != '' ) { %>
+                    <div class="alert alert-success mt-1 center-alert" role="alert">
+                        <%= success %>
+                    </div>
+                <% } %>
+
+            <!-- Say Hello for user -->
+                <% if (user) { %>
+                    <div class="alert alert-primary mt-1 center-alert" role="alert">
+                        Welcom back again <%= user.email.split('@')[0] %>
+                    </div>
+                <% } %>
+
+            <!-- Form Upload -->
+                <form action="/uploadAvatar" method="post" enctype="multipart/form-data">
+                    <input type="file" name="avatar" id="avatar">
+                    <button type="submit" class="btn btn-primary">Upload Image</button>
+                </form>
+        </div>
+
+    </div>
+
+</div>
+<%- include('../fixPages/footer') -%>

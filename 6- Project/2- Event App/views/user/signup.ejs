@@ -1,0 +1,37 @@
+<%- include('../fixPages/header') -%>
+<%- include('../fixPages/navbar') -%>
+<div class="container">
+    <div class="col-md-9 offset-md-2">
+        <h1 class="display-4">Signup:</h1>
+        <hr>
+
+        <!-- Message Succesfuly -->
+            <% if (error && error != '' ) { %>
+                <div class="alert alert-danger mt-1 center-alert" role="alert">
+                    <%= error %>
+                </div>
+            <% } %>
+
+        <!-- Signup -->
+            <form action="/signup" method="POST" class="mt-5">
+                        <!-- Input Email -->
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Email@gmail.com">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+
+                        <!-- Input Password -->
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Set password here">
+                        </div>
+
+                        <!-- Input Confirm Password -->
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="confirmPassword" placeholder="Set Confirm Password here">
+                        </div>
+
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+    </div>
+</div>
+<%- include('../fixPages/footer') -%>

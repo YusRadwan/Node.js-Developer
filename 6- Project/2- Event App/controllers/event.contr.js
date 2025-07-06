@@ -10,11 +10,41 @@
 // Home Page //
     // Get All Event
         let getAllEvent = async (req, res) => {
-            let events = await Event.find({});
-            res.render('event/index', {
-                events: events,
-                msg: req.flash('msg')
-            });
+            let pageNo = 1;
+
+            if (req.params.pageNo) {
+                pageNo = parseInt(req.params.pageNo)
+            }
+
+            if (req.params.pageNo == 0) {
+                pageNo = 1;
+            }
+
+            let q = {
+                skip: 5 * (pageNo - 1),
+                limit: 5
+            }
+
+            // Find Total Documents
+                let totalDoc = 0;
+                const totalEvent = await Event.countDocuments({});
+                // Check If Not Found
+                    if(totalEvent){
+                        totalDoc = parseInt(totalEvent);
+                        let events = await Event.find({}).skip(q.skip).limit(q.limit);
+                        if (events) {
+                            res.render('event/index', {
+                                events: events,
+                                msg: req.flash('msg'),
+                                total: parseInt(totalDoc),
+                                pageNo: pageNo
+                            });
+                        } else {
+                            console.log('Error => Event not found')
+                        }
+                    } else {
+                        console.log('error in Count Events');
+                    }
         };
 
     // get Event By Id
@@ -42,6 +72,7 @@
                     title: title,
                     desc: description,
                     location: location,
+                    user_id: req.user.id,
                     date: date,
                     created_at: Date.now()
                 });
