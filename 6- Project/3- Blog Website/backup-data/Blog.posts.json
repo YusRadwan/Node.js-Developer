@@ -1,0 +1,420 @@
+[{
+  "_id": {
+    "$oid": "686b57ff973fd43808fed683"
+  },
+  "title": "Building APIs with Node.js",
+  "body": "Learn how to use Node.js to build RESTful APIs using frameworks like Express.js",
+  "createdAt": {
+    "$date": "2025-07-07T05:15:43.793Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:15:43.793Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b57ff973fd43808fed684"
+  },
+  "title": "Deployment of Node.js applications",
+  "body": "Understand the different ways to deploy your Node.js applications, including on-premises, cloud, and container environments...",
+  "createdAt": {
+    "$date": "2025-07-07T05:15:43.793Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:15:43.793Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b57ff973fd43808fed685"
+  },
+  "title": "Authentication and Authorization in Node.js",
+  "body": "Learn how to add authentication and authorization to your Node.js web applications using Passport.js or other authentication libraries.",
+  "createdAt": {
+    "$date": "2025-07-07T05:15:43.793Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:15:43.793Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b57ff973fd43808fed686"
+  },
+  "title": "Understand how to work with MongoDB and Mongoose",
+  "body": "Understand how to work with MongoDB and Mongoose, an Object Data Modeling (ODM) library, in Node.js applications.",
+  "createdAt": {
+    "$date": "2025-07-07T05:15:43.794Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:15:43.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b57ff973fd43808fed687"
+  },
+  "title": "build real-time, event-driven applications in Node.js",
+  "body": "Socket.io: Learn how to use Socket.io to build real-time, event-driven applications in Node.js.",
+  "createdAt": {
+    "$date": "2025-07-07T05:15:43.794Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:15:43.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b57ff973fd43808fed688"
+  },
+  "title": "Discover how to use Express.js",
+  "body": "Discover how to use Express.js, a popular Node.js web framework, to build web applications.",
+  "createdAt": {
+    "$date": "2025-07-07T05:15:43.794Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:15:43.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b57ff973fd43808fed689"
+  },
+  "title": "Asynchronous Programming with Node.js",
+  "body": "Asynchronous Programming with Node.js: Explore the asynchronous nature of Node.js and how it allows for non-blocking I/O operations.",
+  "createdAt": {
+    "$date": "2025-07-07T05:15:43.794Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:15:43.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b57ff973fd43808fed68a"
+  },
+  "title": "Learn the basics of Node.js and its architecture",
+  "body": "Learn the basics of Node.js and its architecture, how it works, and why it is popular among developers.",
+  "createdAt": {
+    "$date": "2025-07-07T05:15:43.794Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:15:43.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b57ff973fd43808fed68b"
+  },
+  "title": "NodeJs Limiting Network Traffic",
+  "body": "Learn how to limit netowrk traffic.",
+  "createdAt": {
+    "$date": "2025-07-07T05:15:43.795Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:15:43.795Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b57ff973fd43808fed68c"
+  },
+  "title": "Learn Morgan - HTTP Request logger for NodeJs",
+  "body": "Learn Morgan.",
+  "createdAt": {
+    "$date": "2025-07-07T05:15:43.795Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:15:43.795Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a5b"
+  },
+  "title": "Building APIs with Node.js",
+  "body": "Learn how to use Node.js to build RESTful APIs using frameworks like Express.js",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.528Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.528Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a5c"
+  },
+  "title": "Deployment of Node.js applications",
+  "body": "Understand the different ways to deploy your Node.js applications, including on-premises, cloud, and container environments...",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.529Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.529Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a5d"
+  },
+  "title": "Authentication and Authorization in Node.js",
+  "body": "Learn how to add authentication and authorization to your Node.js web applications using Passport.js or other authentication libraries.",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.529Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.529Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a5e"
+  },
+  "title": "Understand how to work with MongoDB and Mongoose",
+  "body": "Understand how to work with MongoDB and Mongoose, an Object Data Modeling (ODM) library, in Node.js applications.",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.529Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.529Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a5f"
+  },
+  "title": "build real-time, event-driven applications in Node.js",
+  "body": "Socket.io: Learn how to use Socket.io to build real-time, event-driven applications in Node.js.",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a60"
+  },
+  "title": "Discover how to use Express.js",
+  "body": "Discover how to use Express.js, a popular Node.js web framework, to build web applications.",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a61"
+  },
+  "title": "Asynchronous Programming with Node.js",
+  "body": "Asynchronous Programming with Node.js: Explore the asynchronous nature of Node.js and how it allows for non-blocking I/O operations.",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a62"
+  },
+  "title": "Learn the basics of Node.js and its architecture",
+  "body": "Learn the basics of Node.js and its architecture, how it works, and why it is popular among developers.",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a63"
+  },
+  "title": "NodeJs Limiting Network Traffic",
+  "body": "Learn how to limit netowrk traffic.",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a64"
+  },
+  "title": "Learn Morgan - HTTP Request logger for NodeJs",
+  "body": "Learn Morgan.",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a65"
+  },
+  "title": "Building APIs with Node.js",
+  "body": "Learn how to use Node.js to build RESTful APIs using frameworks like Express.js",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a66"
+  },
+  "title": "Deployment of Node.js applications",
+  "body": "Understand the different ways to deploy your Node.js applications, including on-premises, cloud, and container environments...",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a67"
+  },
+  "title": "Authentication and Authorization in Node.js",
+  "body": "Learn how to add authentication and authorization to your Node.js web applications using Passport.js or other authentication libraries.",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a68"
+  },
+  "title": "Understand how to work with MongoDB and Mongoose",
+  "body": "Understand how to work with MongoDB and Mongoose, an Object Data Modeling (ODM) library, in Node.js applications.",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a69"
+  },
+  "title": "build real-time, event-driven applications in Node.js",
+  "body": "Socket.io: Learn how to use Socket.io to build real-time, event-driven applications in Node.js.",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.530Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a6a"
+  },
+  "title": "Discover how to use Express.js",
+  "body": "Discover how to use Express.js, a popular Node.js web framework, to build web applications.",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.531Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.531Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a6b"
+  },
+  "title": "Asynchronous Programming with Node.js",
+  "body": "Asynchronous Programming with Node.js: Explore the asynchronous nature of Node.js and how it allows for non-blocking I/O operations.",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.531Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.531Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a6c"
+  },
+  "title": "Learn the basics of Node.js and its architecture",
+  "body": "Learn the basics of Node.js and its architecture, how it works, and why it is popular among developers.",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.531Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.531Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a6d"
+  },
+  "title": "NodeJs Limiting Network Traffic",
+  "body": "Learn how to limit netowrk traffic.",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.531Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.531Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "686b5834e8567b0ee31b2a6e"
+  },
+  "title": "Learn Morgan - HTTP Request logger for NodeJs",
+  "body": "Learn Morgan.",
+  "createdAt": {
+    "$date": "2025-07-07T05:16:36.531Z"
+  },
+  "updatedAt": {
+    "$date": "2025-07-07T05:16:36.531Z"
+  },
+  "__v": 0
+}]
