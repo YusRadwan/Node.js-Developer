@@ -1,0 +1,42 @@
+[{
+  "_id": "qxaFwl2QxWFGmNar2Fnink8P6hiKYU6Q",
+  "expires": {
+    "$date": "2025-07-27T12:53:18.866Z"
+  },
+  "session": "{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"}}"
+},
+{
+  "_id": "d_wNQLjcgnR8dGkZ-a7fKy-vL__tejf7",
+  "expires": {
+    "$date": "2025-07-27T12:59:15.105Z"
+  },
+  "session": "{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"}}"
+},
+{
+  "_id": "5C-U2CZzpKjgwXS8gPQp_rzrdqseFHpx",
+  "expires": {
+    "$date": "2025-07-27T12:59:42.725Z"
+  },
+  "session": "{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"}}"
+},
+{
+  "_id": "7170Qi3ZNrgYRFOo1vDjk0Z6uTuiCkxl",
+  "expires": {
+    "$date": "2025-08-02T14:39:43.967Z"
+  },
+  "session": "{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"}}"
+},
+{
+  "_id": "4J4sLG1KVZMCFlK0-x5CQl3AQRloTsH4",
+  "expires": {
+    "$date": "2025-08-03T14:35:04.131Z"
+  },
+  "session": "{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"}}"
+},
+{
+  "_id": "KP7fIFSBeghSLlLp6LwUnyBLYzud1dIx",
+  "expires": {
+    "$date": "2025-08-03T14:58:49.003Z"
+  },
+  "session": "{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"}}"
+}]
