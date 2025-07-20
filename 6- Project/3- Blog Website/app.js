@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const connect = require('./server/config/db');
+const methodOverride = require('method-override');
 
 // Database Connect
     connect();
@@ -27,6 +28,9 @@ const connect = require('./server/config/db');
         }),
         //cookie: { maxAge: new Date ( Date.now() + (3600000) ) } 
     }));
+
+// Method HTTP
+    app.use(methodOverride('_method'));
 
 // Template engine
     app.set('view engine', 'ejs');

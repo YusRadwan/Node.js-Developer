@@ -16,9 +16,11 @@
     </nav>
 
     <div class="header__button">
-        <a href="/logout">
-            Logout
-        </a>
+        <% if (locals.title !== "Admin Panel") { %>
+            <a href="/admin/logout">
+                Logout
+            </a>
+        <% } %>
     </div>
 
 </header>
