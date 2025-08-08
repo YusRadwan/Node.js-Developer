@@ -1,0 +1,62 @@
+{
+  "type": "Compass Connections",
+  "version": {
+    "$numberInt": "1"
+  },
+  "connections": [
+    {
+      "id": "11ce0732-4396-49b6-8559-ede572901845",
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1751783823013"
+        }
+      },
+      "favorite": {
+        "name": "Event-App"
+      },
+      "savedConnectionType": "recent",
+      "connectionOptions": {
+        "connectionString": "mongodb://localhost:27017/",
+        "oidc": {
+          "serializedState": "eyJvaWRjUGx1Z2luU3RhdGVWZXJzaW9uIjowLCJzdGF0ZSI6W119"
+        }
+      }
+    },
+    {
+      "id": "d60ba851-f109-4094-90cd-84c0e11d2dae",
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1753024145163"
+        }
+      },
+      "favorite": {
+        "name": "Blog"
+      },
+      "savedConnectionType": "recent",
+      "connectionOptions": {
+        "connectionString": "mongodb://localhost:27017/",
+        "oidc": {
+          "serializedState": "eyJvaWRjUGx1Z2luU3RhdGVWZXJzaW9uIjoxLCJzdGF0ZSI6W119"
+        }
+      }
+    },
+    {
+      "id": "ffb8e4f1-3720-472c-baf8-42dba4953938",
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1749714305961"
+        }
+      },
+      "favorite": {
+        "name": "Online-Shop"
+      },
+      "savedConnectionType": "recent",
+      "connectionOptions": {
+        "connectionString": "mongodb://localhost:27017/",
+        "oidc": {
+          "serializedState": "eyJvaWRjUGx1Z2luU3RhdGVWZXJzaW9uIjowLCJzdGF0ZSI6W119"
+        }
+      }
+    }
+  ]
+}
