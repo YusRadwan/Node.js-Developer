@@ -1,20 +1,20 @@
 const jwt = require('jsonwebtoken');
 
-const authMiddleware = (req, res, next) => {
+const authjwtMiddleware = (req, res, next) => {
     try {
         const authHeader = req.headers['authorization']; // get header value
         const token = authHeader && authHeader.split(' ')[1]; // ['bearer', 'dsfgsgnll3r342kl'] => get Just jwt Code
 
-        if(!token) return res.status(401).json({msg: 'Token not Found'});
+        if(!token) return res.status(401).json({msg: 'Token is Empty'});
 
         jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
-            if(err) return res.status(403).json({msg: "Wrong With Token"});
+            if(err) return res.status(403).json({msg: "Token Not Exist"}, console.log(err.message));
             req.user = user;
             next();
         });
     } catch (err) {
-        return res.status(500).json({msg: `Wrong in auth Function`}, console.log(err.message));
+        return res.status(500).json({msg: `Wrong in auth JWT Function`}, console.log(err.message));
     }
 }
 
-module.exports = authMiddleware;
+module.exports = authjwtMiddleware;

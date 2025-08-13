@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const authMiddleware = require('../middleware/authMiddleware');
+const authjwtMiddleware = require('../middleware/authjwt');
 const checkRole = require('../middleware/checkRole');
 
 // Dashboard
-    router.get('/dashboard', authMiddleware, checkRole('admin'), (req, res) => {
+    router.get('/dashboard', authjwtMiddleware, checkRole('admin'), (req, res) => {
         res.status(200).json({msg: 'Welcome Dashboard Page', user: req.user});
     });
 

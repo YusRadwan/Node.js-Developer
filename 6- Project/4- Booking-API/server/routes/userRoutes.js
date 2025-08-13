@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const userController = require('../controllers/userController');
-const authMiddleware = require('../middleware/authMiddleware');
+const authjwtMiddleware = require('../middleware/authjwt');
 const checkRole = require('../middleware/checkRole');
 
 // Register New User
@@ -12,13 +12,16 @@ const checkRole = require('../middleware/checkRole');
     router.post('/login', userController.loginUser);
 
 // All
-    router.get('/all', authMiddleware, checkRole('admin'), userController.getAllUser);
+    router.get('/all', authjwtMiddleware, checkRole('admin'), userController.getAllUser);
 
 // Profile
-    router.get('/profile', authMiddleware, checkRole('user'), userController.getProfile);
+    router.get('/profile', authjwtMiddleware, checkRole('user'), userController.getProfile);
+
+// Update
+    router.put('/:id', authjwtMiddleware, checkRole('admin'), userController.updateUser);
 
 // Delete
-    router.delete('/:id', authMiddleware, checkRole('admin'), userController.deleteUser);
+    router.delete('/:id', authjwtMiddleware, checkRole('admin'), userController.deleteUser);
 
 
 module.exports = router;
